@@ -6,6 +6,7 @@ RUN apk add --update --no-cache \
     python \
     py-pip \
     groff \
+    jq \
     ca-certificates \
     nodejs \
     yarn \
