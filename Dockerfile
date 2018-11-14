@@ -11,6 +11,7 @@ RUN apk add --update --no-cache \
     nodejs \
     yarn \
     git \
+    openssh-client \
     docker && \
     pip install --upgrade awscli && \
     apk -v --purge del py-pip
