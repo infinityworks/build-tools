@@ -1,5 +1,5 @@
 # Build Tools
 
-<a href="https://hub.docker.com/r/infinityworks/build-tools/builds/"><img src="https://img.shields.io/docker/automated/infinityworks/build-tools.svg" /></a>
+[![Docker Pulls](https://img.shields.io/docker/pulls/infinityworks/build-tools.svg)][hub]
 
 A Docker image containing AWS CLI, Node.js, and yarn
