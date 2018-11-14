@@ -10,6 +10,7 @@ RUN apk add --update --no-cache \
     ca-certificates \
     nodejs \
     yarn \
+    git \
     docker && \
     pip install --upgrade awscli && \
     apk -v --purge del py-pip
