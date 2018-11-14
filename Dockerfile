@@ -11,6 +11,7 @@ RUN apk add --update --no-cache \
     nodejs \
     yarn \
     git \
+    zip \
     openssh-client \
     docker && \
     pip install --upgrade awscli && \
