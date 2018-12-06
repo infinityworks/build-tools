@@ -14,5 +14,5 @@ RUN apk add --update --no-cache \
     zip \
     openssh-client \
     docker && \
-    pip install --upgrade awscli && \
+    pip install --upgrade awscli docker-compose && \
     apk -v --purge del py-pip
