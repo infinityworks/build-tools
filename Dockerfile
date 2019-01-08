@@ -12,12 +12,15 @@ RUN apk add --update --no-cache \
     jq \
     ca-certificates \
     nodejs \
-    yarn \
+    curl \
     git \
     zip \
     openssh-client \
     docker && \
     pip install --upgrade awscli docker-compose && \
-    apk -v --purge del py-pip
+    apk -v --purge del py-pip && \
+    curl -o- -L https://yarnpkg.com/install.sh | bash
+
+ENV PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
 
 CMD ["/bin/bash"]
