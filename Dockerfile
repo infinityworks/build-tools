@@ -21,6 +21,8 @@ RUN apk add --update --no-cache \
     apk -v --purge del py-pip && \
     curl -o- -L https://yarnpkg.com/install.sh | bash
 
-ENV PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:$PATH"
+ENV PATH="~/.yarn/bin:~/.config/yarn/global/node_modules/.bin:/scripts:$PATH"
+
+COPY ./scripts /scripts/
 
 CMD ["/bin/bash"]
