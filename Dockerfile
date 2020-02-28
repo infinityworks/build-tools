@@ -1,9 +1,9 @@
-FROM debian:stretch
+FROM debian:buster
 
 LABEL maintainer="Infinity Works"
 
 RUN apt-get update && \
-    apt-get install -y curl python python-pip && \
+    apt-get install -y curl python3-pip && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     curl -sS https://download.docker.com/linux/debian/gpg | apt-key add - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-cache policy docker-ce yarn && \
     apt-get install -y nodejs jq git zip docker-ce yarn && \
-    pip install awscli docker-compose && \
+    pip3 install awscli docker-compose && \
     apt-get -y --purge autoremove && \
     rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/*
 
