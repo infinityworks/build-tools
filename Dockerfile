@@ -4,7 +4,7 @@ LABEL maintainer="Infinity Works"
 
 RUN apt-get update && \
     apt-get install -y curl python3-pip && \
-    curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     curl -sS https://download.docker.com/linux/debian/gpg | apt-key add - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee -a /etc/apt/sources.list.d/docker.list && \
